@@ -19,6 +19,7 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+/* Task 1 */
 .text-btn {
   display: flex;
   flex-direction: row;
@@ -45,7 +46,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
-  color: #989898;
+  color: #ffffff;
   max-width: 75px;
   height: 40px;
   border-radius: 8px;
@@ -53,7 +54,19 @@ body {
   width: 75px;
   height: 40px;
   border: none;
+  background-color: #4e75ff;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.text-btn button:hover {
+  background-color: #6c8cff;
+}
+
+.text-btn button:disabled {
   background-color: #cfcfcf;
+  color: #989898;
+  cursor: not-allowed;
 }
 
 .timer {
@@ -78,4 +91,99 @@ body {
   font-size: 16px;
   line-height: 1.5;
   color: #2e2f42;
+}
+
+/* Task 2 */
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  margin-bottom: 16px;
+}
+
+.form input[type='number'] {
+  margin-top: 8px;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  width: 360px;
+  height: 40px;
+  padding: 8px 16px;
+  background-color: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form input[type='number']:focus {
+  border-color: #000000;
+  outline: transparent;
+}
+
+fieldset {
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 360px;
+  height: 64px;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  padding: 8px 16px;
+}
+
+fieldset legend {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  padding: 0 5px;
+}
+
+.radio-input {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #2e2f42;
+}
+.radio-fulfilled {
+  margin-right: 48px;
+}
+
+input[type='radio'] {
+  margin-right: 8px;
+  width: 20px;
+  height: 20px;
+  accent-color: #757575;
+}
+
+button[type='submit'] {
+  width: 360px;
+  height: 40px;
+  background-color: #4e75ff;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+button[type='submit']:hover {
+  background-color: #6c8cff;
 }
